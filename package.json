@@ -25,7 +25,8 @@
     "scheduler": "^0.20.2",
     "smoothscroll-polyfill": "^0.4.4",
     "styled-components": "^5.3.0",
-    "styled-normalize": "^8.0.7"
+    "styled-normalize": "^8.0.7",
+    "tar": "^6.1.12"
   },
   "devDependencies": {
     "@types/react": "17.0.11",
