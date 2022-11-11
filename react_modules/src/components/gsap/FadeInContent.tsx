@@ -1,5 +1,5 @@
 import gsap from 'gsap';
-import React, { ReactChild, ReactChildren, useEffect, useRef } from 'react';
+import React, {useEffect, useRef } from 'react';
 
 interface TextProps {
   children?: React.ReactNode;
