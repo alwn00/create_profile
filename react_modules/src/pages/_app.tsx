@@ -5,13 +5,14 @@ import React from 'react';
 import smoothscroll from 'smoothscroll-polyfill';
 import { ThemeProvider } from 'styled-components';
 
-import GlobalStyle from '#/styles/globalStyles';
-import { theme } from '#/styles/theme';
+import GlobalStyle from '../styles/globalStyles';
+import { theme } from '../styles/theme';
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
   smoothscroll.polyfill();
 }
+
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
