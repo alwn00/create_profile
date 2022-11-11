@@ -2,10 +2,10 @@ import gsap from 'gsap';
 import React, { ReactChild, ReactChildren, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
-import { BOLD_TEXT } from '#/constants';
+import { BOLD_TEXT } from '../../constants';
 
 interface TextProps {
-  children?: ReactChild | ReactChildren | ReactChildren[] | ReactChild[];
+  children?: React.ReactNode;
   delay: number;
 }
 

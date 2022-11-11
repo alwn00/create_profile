@@ -7,7 +7,7 @@ interface Color {
 }
 
 interface UnderlineProps {
-  children?: ReactChild | ReactChildren | ReactChildren[] | ReactChild[];
+  children?: React.ReactNode;
   delay: number;
   color: string;
 }

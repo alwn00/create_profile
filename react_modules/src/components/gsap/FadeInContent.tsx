@@ -2,7 +2,7 @@ import gsap from 'gsap';
 import React, { ReactChild, ReactChildren, useEffect, useRef } from 'react';
 
 interface TextProps {
-  children?: ReactChild | ReactChildren | ReactChildren[] | ReactChild[];
+  children?: React.ReactNode;
   delay: number;
 }
 

@@ -2,10 +2,10 @@ import gsap from 'gsap';
 import React, { ReactChild, ReactChildren, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
-import { REGULAR_TEXT } from '#/constants';
+import { REGULAR_TEXT } from '../../constants';
 
 interface TextProps {
-  children?: ReactChild | ReactChildren | ReactChildren[] | ReactChild[];
+  children?: React.ReactNode;
   delay: number;
 }
 
@@ -31,7 +31,8 @@ const FadeInBodyText = ({ children, delay }: TextProps) => {
       ease: 'power3.out',
     });
   }, [delay]);
-  return <BodyTextContainer ref={target}>{children}</BodyTextContainer>;
+  return (({children}:TextProps) =>
+  (<BodyTextContainer ref={target}>{children}</BodyTextContainer>));
 };
 
 export default FadeInBodyText;
