@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import YellowPoint from '#/components/YellowPoint';
-import { BOLD_TEXT } from '#/constants';
+import YellowPoint from '../../YellowPoint';
+import { BOLD_TEXT } from '../../../constants';
 
 const StyledExperienceTitle = styled.h1`
   font-size: 70px;
