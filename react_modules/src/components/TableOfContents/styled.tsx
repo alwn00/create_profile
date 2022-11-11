@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import { UNDER_LINE_COLOR } from '#/colors';
-import { BOLD_TEXT } from '#/constants';
+import { UNDER_LINE_COLOR } from '../../colors';
+import { BOLD_TEXT } from '../../constants';
 
 export const Container = styled.div`
   display: flex;

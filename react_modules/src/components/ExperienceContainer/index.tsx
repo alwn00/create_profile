@@ -1,7 +1,7 @@
 import { useMediaQuery } from '@material-ui/core';
 import React from 'react';
 
-import { FadeInContent } from '#/components/gsap';
+import { FadeInContent } from '../gsap';
 
 import TableOfContents from '../TableOfContents';
 import { ExperienceTitle } from './common';

@@ -1,145 +1,153 @@
-import { useMediaQuery } from '@material-ui/core';
-import React from 'react';
+import styled from 'styled-components';
 
-import { FadeInContent } from '../components/gsap';
+import { BOLD_TEXT, DESKTOP_CONTENT_WIDTH } from '../../constants';
 
-import TableOfContents from '../TableOfContents';
-import { ExperienceTitle } from './common';
-import * as Content from './contents';
-import * as Styled from './styled';
+// All
+export const Container = styled.section`
+  display: flex;
+  position: relative;
+  width: 100vw;
+  background-color: rgb(245, 245, 245);
+`;
 
-const CONTENT_DELAY_TIME = 0.3;
+export const TableOfContents = styled.nav`
+  position: sticky;
+  top: 0;
+  width: 20vw;
+  height: 100vh;
+`;
 
-const ExperienceContainer = () => {
-  const isOver1100px = useMediaQuery('(min-width:1100px)');
+export const Contents = styled.article`
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  padding: 40px;
+  color: black;
+`;
 
-  return (
-    <Styled.Container id="experience-container">
-      {isOver1100px && (
-        <Styled.TableOfContents>
-          <TableOfContents />
-        </Styled.TableOfContents>
-      )}
-      <Styled.Contents>
-        <Styled.ExperienceContainer>
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            <ExperienceTitle title="Work" />
-          </FadeInContent>
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            {/* eslint-disable-next-line react/jsx-pascal-case */}
-            <Content.당근마켓 />
-          </FadeInContent>
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            <Content.Hayanmind />
-          </FadeInContent>
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            <Content.SatrecI />
-          </FadeInContent>
-        </Styled.ExperienceContainer>
+export const ExperienceContainer = styled.article`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  row-gap: 70px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  @media ${props => props.theme.mobile} {
+    row-gap: 55px;
+  }
+`;
 
-        <Styled.ExperienceContainer>
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            <ExperienceTitle title="Project" />
-          </FadeInContent>
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            <Content.MyTechBlogAsProjects />
-          </FadeInContent>
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            <Content.ReactSeasonComponent />
-          </FadeInContent>
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            <Content.FindDifferentColor />
-          </FadeInContent>
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            <Content.Portfolio />
-          </FadeInContent>
-        </Styled.ExperienceContainer>
+// Card
 
-        <Styled.ExperienceContainer>
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            <ExperienceTitle title="Share" />
-          </FadeInContent>
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            <Content.MyTechBlogAsShares />
-          </FadeInContent>
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            <Content.Tistory />
-          </FadeInContent>
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            <Content.Velog />
-          </FadeInContent>
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            <Content.YouTube />
-          </FadeInContent>
-        </Styled.ExperienceContainer>
+export const ExperienceCard = styled.article`
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  position: relative;
+  width: ${DESKTOP_CONTENT_WIDTH};
+  background-color: rgb(245, 245, 245);
+  @media ${props => props.theme.desktop} {
+    width: ${DESKTOP_CONTENT_WIDTH};
+  }
+  @media ${props => props.theme.tablet} {
+    width: 80vw;
+  }
+  @media ${props => props.theme.mobile} {
+    width: 80vw;
+    row-gap: 15px;
+  }
+`;
 
-        <Styled.ExperienceContainer>
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            <ExperienceTitle title="Education" />
-          </FadeInContent>
+export const ExperienceCardTitleType = styled.span`
+  font-size: 24px;
+  @media ${props => props.theme.mobile} {
+    font-size: 20px;
+  }
+`;
 
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            <Content.Univercity />
-          </FadeInContent>
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            <Content.NextStepCleanCodeWithJavaScript />
-          </FadeInContent>
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            <Content.WooahanTechCource />
-          </FadeInContent>
-        </Styled.ExperienceContainer>
+export const ExperienceCardTitle = styled.h2`
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  font-size: 40px;
+  margin: 0;
+  font-family: ${BOLD_TEXT};
+  @media ${props => props.theme.mobile} {
+    font-size: 32px;
+  }
+`;
 
-        <Styled.ExperienceContainer>
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            <ExperienceTitle title="OpenSource" />
-          </FadeInContent>
+export const ExperienceCardSubTitle = styled.h3`
+  font-size: 30px;
+  margin: 0;
+  font-family: ${BOLD_TEXT};
+`;
 
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            <Content.StorybookAddonRootAttributes />
-          </FadeInContent>
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            <Content.TypeChallenges />
-          </FadeInContent>
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            <Content.MDNWebDocsClass />
-          </FadeInContent>
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            <Content.Vite />
-          </FadeInContent>
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            <Content.GoogleWebFundamentals />
-          </FadeInContent>
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            <Content.ReactContribute />
-          </FadeInContent>
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            <Content.Kubernetes />
-          </FadeInContent>
-        </Styled.ExperienceContainer>
+export const ExperienceCardPeriod = styled.span`
+  font-size: 18px;
+  @media ${props => props.theme.mobile} {
+    font-size: 16px;
+  }
+`;
 
-        <Styled.ExperienceContainer>
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            <ExperienceTitle title="Study" />
-          </FadeInContent>
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            <Content.FrontEndJobPrepare />
-          </FadeInContent>
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            <Content.ModernJavaScriptDeepDive />
-          </FadeInContent>
-        </Styled.ExperienceContainer>
+export const ExperienceCardExplainContainer = styled.article`
+  display: flex;
+  flex-direction: column;
+  row-gap: 7px;
+`;
 
-        <Styled.ExperienceContainer>
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            <ExperienceTitle title="Posted" />
-          </FadeInContent>
-          <FadeInContent delay={CONTENT_DELAY_TIME}>
-            <Content.FastCampus />
-          </FadeInContent>
-        </Styled.ExperienceContainer>
-      </Styled.Contents>
-    </Styled.Container>
-  );
-};
+export const HyperLinkContainer = styled.article`
+  display: flex;
+  flex-direction: column;
+  row-gap: 7px;
+`;
 
-export default ExperienceContainer;
+export const SkillContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+export const SkillItem = styled.div`
+  &:after {
+    content: '·';
+    margin: 0 6px;
+  }
+  &:last-child::after {
+    content: '';
+    margin: 0;
+  }
+`;
+
+export const SkillIcon = styled.img`
+  object-fit: contain;
+  width: 50px;
+  height: 50px;
+`;
+
+export const CommonArticleContainer = styled.article`
+  /* border-radius: 7px; */
+  /* padding: 15px; */
+  /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  background-color: rgba(255, 255, 255, 0.8); */
+  @media ${props => props.theme.desktop} {
+    width: 60vw;
+  }
+  @media ${props => props.theme.tablet} {
+    width: 90vw;
+  }
+  @media ${props => props.theme.mobile} {
+    width: 80vw;
+  }
+`;
+
+export const CommonArticleContainerTitle = styled.p`
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  margin-top: 0;
+  font-size: 24px;
+  font-family: ${BOLD_TEXT};
+  @media ${props => props.theme.mobile} {
+    font-size: 20px;
+  }
+`;

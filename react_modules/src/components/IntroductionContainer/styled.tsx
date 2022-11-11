@@ -1,7 +1,7 @@
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import styled from 'styled-components';
 
-import { BOLD_TEXT } from '#/constants';
+import { BOLD_TEXT } from '../../constants';
 
 export const Container = styled.section`
   display: flex;
@@ -10,7 +10,6 @@ export const Container = styled.section`
   width: 100vw;
   background-color: #202224;
   color: white;
-
   @media ${props => props.theme.tablet} {
     flex-direction: column;
     height: 150vh;
@@ -26,7 +25,6 @@ export const Sidebar = styled.aside`
   align-items: center;
   width: 20vw;
   height: 100%;
-
   @media ${props => props.theme.tablet} {
     width: 100vw;
     height: 100%;
@@ -42,7 +40,6 @@ export const LinkContainer = styled.div`
   margin-top: 57px;
   font-family: ${BOLD_TEXT};
   row-gap: 15px;
-
   @media ${props => props.theme.tablet} {
     row-gap: 5px;
   }
@@ -55,13 +52,10 @@ export const Link = styled.a`
   font-size: 30px;
   text-align: left;
   padding: 10px;
-
   background: linear-gradient(to right, transparent 50%, rgb(248, 205, 7) 50%);
   background-size: 200%;
   background-position: 0 0;
-
   transition: 0.25s ease;
-
   :hover {
     background-position: -100% 0;
   }
@@ -78,7 +72,6 @@ export const BottomContainer = styled.div`
 export const Email = styled.a`
   text-decoration: none;
   font-size: 16px;
-
   :hover {
     color: rgba(255, 255, 255, 0.5);
   }
@@ -98,12 +91,10 @@ export const Main = styled.article`
   align-items: center;
   width: 80vw;
   height: 100%;
-
   @media ${props => props.theme.tablet} {
     width: 100vw;
     height: 200vh;
   }
-
   @media ${props => props.theme.mobile} {
     width: 100vw;
     height: 200vh;
@@ -112,11 +103,9 @@ export const Main = styled.article`
 
 export const SubTitle = styled.span`
   font-size: 50px;
-
   @media ${props => props.theme.tablet} {
     font-size: 40px;
   }
-
   @media ${props => props.theme.mobile} {
     font-size: 28px;
   }
@@ -124,11 +113,9 @@ export const SubTitle = styled.span`
 
 export const Title = styled.span`
   font-size: 85px;
-
   @media ${props => props.theme.tablet} {
     font-size: 70px;
   }
-
   @media ${props => props.theme.mobile} {
     font-size: 38px;
   }
@@ -143,11 +130,9 @@ export const BodyTextContainer = styled.div`
 
 export const BodyText = styled.span`
   font-size: 30px;
-
   @media ${props => props.theme.tablet} {
     font-size: 23px;
   }
-
   @media ${props => props.theme.mobile} {
     font-size: 14px;
   }
@@ -159,13 +144,11 @@ export const ImageBox = styled.div`
   top: 0;
   opacity: 0.5;
   width: 100vw;
-
   img {
     width: 80vw;
     height: 100vh;
     object-fit: cover;
   }
-
   @media ${props => props.theme.tablet} {
     position: absolute;
     left: 0;
@@ -173,7 +156,6 @@ export const ImageBox = styled.div`
       width: 100vw;
     }
   }
-
   @media ${props => props.theme.mobile} {
     position: absolute;
     left: 0;
@@ -187,7 +169,6 @@ export const DownAnimatedArrow = styled(KeyboardArrowDownIcon)`
   margin-top: 100px;
   animation: bounce 1.5s ease infinite;
   color: white;
-
   @keyframes bounce {
     0%,
     20%,
@@ -203,3 +184,4 @@ export const DownAnimatedArrow = styled(KeyboardArrowDownIcon)`
       transform: translateY(-10px);
     }
   }
+`;
